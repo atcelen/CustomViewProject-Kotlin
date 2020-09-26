@@ -7,6 +7,7 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    // Attributes
     val foodNameList : ArrayList<String> = ArrayList()
     val priceList : ArrayList<Int> = ArrayList()
     val foodImagesList : ArrayList<Bitmap> = ArrayList()
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         foodImagesList.add(BitmapFactory.decodeResource(applicationContext.resources, R.drawable.fondue))
         foodImagesList.add(BitmapFactory.decodeResource(applicationContext.resources, R.drawable.sushi))
 
+        // See "MenuAdapterClass.java" for details
         val menuAdapter : MenuAdapterClass = MenuAdapterClass(foodNameList, priceList, foodImagesList, this)
         listView.adapter = menuAdapter
 
